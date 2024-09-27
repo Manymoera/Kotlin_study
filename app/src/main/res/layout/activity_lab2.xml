@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_lab2">
+
+    <EditText
+        android:id="@+id/editTextText3"
+        android:layout_width="382dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Enter a number"
+        android:inputType="text"
+        android:text="42"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="242dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="96dp"
+        android:background="#D9C7C7"
+        android:text="ToggleButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonHold"
+        android:layout_width="241dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="224dp"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewHold"
+        android:layout_width="245dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="328dp"
+        android:text="@string/buttonHoldR"
+        android:textSize="20sp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="304dp"
+        android:layout_marginTop="396dp"
+        android:text="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewCount"
+        android:layout_width="265dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="396dp"
+        android:text="Counts a number of clicks on the button ->"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="256dp"
+        android:layout_height="251dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="464dp"
+        android:datePickerMode="calendar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
