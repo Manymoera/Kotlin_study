@@ -1,5 +1,6 @@
 package com.example.first_app_1
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
@@ -12,8 +13,6 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import org.w3c.dom.Text
-import java.util.Date
 
 class Activity_lab2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,6 +27,7 @@ class Activity_lab2 : AppCompatActivity() {
         val BtnTgl : ToggleButton = findViewById(R.id.toggleButton)
         val BtnHold : Button = findViewById(R.id.buttonHold)
         val BtnCount : Button = findViewById(R.id.buttonCount)
+        val BtnCh : Button = findViewById(R.id.buttonN)
         var ClickCount : Int = 0
         val TxtHold : TextView = findViewById(R.id.textViewHold)
         val DatePick : DatePicker = findViewById(R.id.datePicker)
@@ -60,6 +60,10 @@ class Activity_lab2 : AppCompatActivity() {
         }
         DatePick.setOnDateChangedListener { datePicker, year, monthOfYear, dayOfMonth ->
             Log.d("Date picked: ", "Day: $dayOfMonth Month: $monthOfYear Year: $year")
+        }
+        BtnCh.setOnClickListener() {
+            val Intent = Intent(this, Activity_lab3_2::class.java)
+            startActivity(Intent)
         }
     }
 }
