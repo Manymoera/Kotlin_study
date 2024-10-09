@@ -79,36 +79,6 @@
 
     </FrameLayout>
 
-    <Button
-        android:id="@+id/buttonPageAdd"
-        android:layout_width="97dp"
-        android:layout_height="62dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="272dp"
-        android:text="Add page"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/buttonPageDel"
-        android:layout_width="97dp"
-        android:layout_height="62dp"
-        android:layout_marginStart="144dp"
-        android:layout_marginTop="272dp"
-        android:text="Delete page"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/buttonPageView"
-        android:layout_width="97dp"
-        android:layout_height="62dp"
-        android:layout_marginStart="260dp"
-        android:layout_marginTop="272dp"
-        android:text="View page"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <FrameLayout
         android:layout_width="410dp"
         android:layout_height="4dp"

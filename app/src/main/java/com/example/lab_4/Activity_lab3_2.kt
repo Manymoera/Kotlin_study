@@ -2,6 +2,7 @@ package com.example.lab_4
 
 import TaskAdapter
 import android.content.DialogInterface
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -57,18 +58,30 @@ class Activity_lab3_2 : AppCompatActivity() {
         /*
         6) Создать приложение со списком SilicaListView, из задач на неделю. Задачи
         должны содержать дату и описание. В списке задачи группировать по датам.
+        10) Создать приложение со списком и контекстным меню. После выбора элемента
+        контекстного меню отобразить в консоли название выбранного элемента меню
+        и индекс элемента списка.
          */
         recyclerView = findViewById(R.id.recycleList)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         taskList = mutableListOf(
-            Task("Monday, 2024-10-07", "Complete project documentation"),
-            Task("Monday, 2024-10-07", "Team meeting at 10:00 AM")
+            Task("Monday", "Complete project documentation"),
+            Task("Monday", "Team meeting at 10:00 AM"),
+            Task("Tuesday", "Prepare presentation slides"),
+            Task("Tuesday", "Code review with team")
         )
 
-        taskAdapter = TaskAdapter(groupTasksByDate(taskList))
-        recyclerView.adapter = taskAdapter
+        taskAdapter = TaskAdapter(groupTasksByDate(taskList), this)
+        recyclerView.adapter = TaskAdapter(taskList, this)
+
+        val BtnSwap : Button = findViewById(R.id.buttonSwap)
+        BtnSwap.setOnClickListener {
+            val intent = Intent(this, Activity_lab3_3::class.java)
+            startActivity(intent)
+        }
     }
+
     private fun groupTasksByDate(tasks: List<Task>): List<Task> {
         val groupedTasks = mutableListOf<Task>()
         var lastDate = ""
@@ -78,9 +91,10 @@ class Activity_lab3_2 : AppCompatActivity() {
                 groupedTasks.add(Task(task.date, ""))  // Заголовок для группы (дата)
                 lastDate = task.date
             }
-            groupedTasks.add(task)  // Добавляем задачи с одинаковой датой
+            groupedTasks.add(Task("", task.description))  // Добавляем задачи с одинаковой датой
         }
 
         return groupedTasks
     }
+
 }

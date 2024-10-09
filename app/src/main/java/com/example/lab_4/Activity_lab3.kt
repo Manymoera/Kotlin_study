@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.CalendarView
-import android.widget.DatePicker
 import android.widget.EditText
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -14,7 +13,6 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.first_app_1.Activity_lab2_2
 import com.example.first_app_1.BlankPage
 import com.example.first_app_1.R
 import java.util.Vector
@@ -41,11 +39,11 @@ class Activity_lab3 : AppCompatActivity() {
         var StPoint: Int = 1
         BtnN.setOnClickListener {
             if(arrayIntent.isEmpty()) {
-                arrayIntent.add(0, Intent(this, Activity_lab2_2::class.java))
+                arrayIntent.add(0, Intent(this, BlankPage::class.java))
                 TxtS.text = "Stack depth: $StPoint"
             }
             else {
-                arrayIntent.add(StPoint, Intent(this, Activity_lab2_2::class.java))
+                arrayIntent.add(StPoint, Intent(this, BlankPage::class.java))
                 StPoint++
                 TxtS.text = "Stack depth: $StPoint"
             }
@@ -66,23 +64,7 @@ class Activity_lab3 : AppCompatActivity() {
         страницу как прикреплённую, вторая кнопка её удалит. На второй странице
         должна быть кнопка для возврата на первую страницу без закрытия второй.
         */
-        val BtnAdd : Button = findViewById(R.id.buttonPageAdd)
-        val BtnDel : Button = findViewById(R.id.buttonPageDel)
-        val BtnView : Button = findViewById(R.id.buttonPageView)
-        var Intent  = Intent(this, BlankPage::class.java)
-        BtnAdd.setOnClickListener {
-            if(Intent.data == null) {
-                Intent(this, BlankPage::class.java).also { startActivity(it) }
-            }
-        }
-        BtnDel.setOnClickListener {
-            //Intent.setData(null)
-        }
-        BtnView.setOnClickListener {
-            if(Intent.data == null) {
-                startActivity(Intent)
-            }
-        }
+        // В ДРУГОМ ФАЙЛЕ
         /*
         3) Создать приложение с одной кнопкой и текстовом поле. После нажатия на
         кнопку отображается диалог для ввода текста. После согласия с результатом

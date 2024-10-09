@@ -13,6 +13,12 @@
         android:theme="@style/Theme.First_app_1"
         tools:targetApi="31">
         <activity
+            android:name="com.example.lab_4.Lab3_task2"
+            android:exported="true" />
+        <activity
+            android:name="com.example.lab_4.Activity_lab3_3"
+            android:exported="false" />
+        <activity
             android:name="com.example.lab_4.Activity_lab3_2"
             android:exported="false"
             android:theme="@style/Theme.First_app_1" />

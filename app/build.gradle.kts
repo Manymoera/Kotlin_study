@@ -56,6 +56,8 @@ dependencies {
     implementation(libs.androidx.ui.graphics.android)
     implementation(libs.androidx.foundation.android)
     implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
+    val fragment_version = "1.8.4"
+    implementation("androidx.fragment:fragment-ktx:$fragment_version")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
