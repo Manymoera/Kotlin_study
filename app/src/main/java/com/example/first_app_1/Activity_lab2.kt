@@ -62,7 +62,7 @@ class Activity_lab2 : AppCompatActivity() {
             Log.d("Date picked: ", "Day: $dayOfMonth Month: $monthOfYear Year: $year")
         }
         BtnCh.setOnClickListener() {
-            val Intent = Intent(this, Activity_lab3_2::class.java)
+            val Intent = Intent(this, Activity_lab2_2::class.java)
             startActivity(Intent)
         }
     }
