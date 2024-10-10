@@ -24,11 +24,11 @@ class Activity_lab3_3 : AppCompatActivity() {
 
         // Создаем список задач на неделю
         val taskList = listOf(
-            Task("Monday, 2024-10-07", "Complete project documentation"),
-            Task("Tuesday, 2024-10-08", "Prepare presentation slides"),
-            Task("Wednesday, 2024-10-09", "Code review with team"),
-            Task("Thursday, 2024-10-10", "Client call at 3:00 PM"),
-            Task("Friday, 2024-10-11", "Submit the final report")
+            Task("Monday", "do smth"),
+            Task("Tuesday", "do smth"),
+            Task("Wednesday", "do smth"),
+            Task("Thursday", "do smth"),
+            Task("Friday", "do smth")
         )
 
         // Устанавливаем адаптер для ViewPager

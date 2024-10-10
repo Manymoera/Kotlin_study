@@ -11,7 +11,12 @@ class Lab3_task2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_lab3_task2)
-
+        /*
+        2) Создать приложение из двух страниц. Первая страница содержит две кнопки
+        “Добавить страницу” и “Убрать страницу”. Первая кнопка добавит вторую
+        страницу как прикреплённую, вторая кнопка её удалит. На второй странице
+        должна быть кнопка для возврата на первую страницу без закрытия второй.
+        */
         // Загрузка первого фрагмента при запуске приложения
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()

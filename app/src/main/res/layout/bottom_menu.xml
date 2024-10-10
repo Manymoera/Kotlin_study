@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">>
+
+    <TextView
+        android:id="@+id/itemA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SmthA"
+        android:padding="16dp"/>
+    <!--        android:background="?attr/selectableItemBackground"/>-->
+
+    <TextView
+        android:id="@+id/itemB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SmthB"
+        android:padding="16dp"/>
+    <!--        android:background="?attr/selectableItemBackground"/>-->
+
+    <TextView
+        android:id="@+id/itemC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SmthC"
+        android:padding="16dp"/>
+    <!--        android:background="?attr/selectableItemBackground"/>-->
+
+</LinearLayout>

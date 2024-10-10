@@ -66,10 +66,10 @@ class Activity_lab3_2 : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         taskList = mutableListOf(
-            Task("Monday", "Complete project documentation"),
-            Task("Monday", "Team meeting at 10:00 AM"),
-            Task("Tuesday", "Prepare presentation slides"),
-            Task("Tuesday", "Code review with team")
+            Task("Monday", "do smth"),
+            Task("Monday", "do smth"),
+            Task("Tuesday", "do smth"),
+            Task("Friday", "do smth")
         )
 
         taskAdapter = TaskAdapter(groupTasksByDate(taskList), this)
